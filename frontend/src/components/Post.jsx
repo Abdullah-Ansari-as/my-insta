@@ -259,23 +259,23 @@ function Post({ post }) {
 				alt="post_img"
 			/>
 
-			<div className=" mx-[10px] 640px:mx-0">
+			<div className="mx-[15px] 640px:mx-0">
 
 				<div className="flex items-center justify-between my-2">
 					<div className="flex gap-3">
 						{
-							liked ? <FaHeart onClick={likeDisLikHandler} className={`cursor-pointer text-red-600 size-5 md:size-6 ${isAnimating ? 'animate-heartBeat' : ''}`} /> : <FaRegHeart onClick={likeDisLikHandler} className='cursor-pointer hover:text-gray-600 size-5 md:size-6' />
+							liked ? <FaHeart onClick={likeDisLikHandler} className={`cursor-pointer text-red-600 size-6 ${isAnimating ? 'animate-heartBeat' : ''}`} /> : <FaRegHeart onClick={likeDisLikHandler} className='cursor-pointer hover:text-gray-600 size-6' />
 						}
 
 						<MessageCircle onClick={() => {
 							dispatch(setSelectedPost(post))
 							setOpenCommentDialog(true)
-						}} className='cursor-pointer hover:text-gray-600 size-5 md:size-6' />
-						<Send className='cursor-pointer hover:text-gray-600 size-5 md:size-6' />
+						}} className='cursor-pointer hover:text-gray-600 size-6' />
+						<Send className='cursor-pointer hover:text-gray-600 size-6' />
 					</div>
 					<div className="">
 						{
-							isBookMarked ? <IoBookmark onClick={bookmarkHandler} className='cursor-pointer hover:text-gray-600 size-5 md:size-6' /> : <IoBookmarkOutline onClick={bookmarkHandler} className='cursor-pointer hover:text-gray-600 size-5 md:size-6' />
+							isBookMarked ? <IoBookmark onClick={bookmarkHandler} className='cursor-pointer hover:text-gray-600 size-6' /> : <IoBookmarkOutline onClick={bookmarkHandler} className='cursor-pointer hover:text-gray-600 size-6' />
 						}
 					</div>
 				</div>
